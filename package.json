@@ -1,17 +1,21 @@
 {
-  "name": "koa-queryparser",
+  "name": "koa-query-pretty",
   "version": "0.0.1",
-  "description": "",
+  "description": "Pretty query middleware for koa.",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint lib/*.js",
     "test": "npm run lint && mocha --colors"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MinJieLiu/koa-query-pretty.git"
+  },
   "keywords": [
     "koa",
     "query",
     "koa-query",
-    "koa-queryparser"
+    "koa-query-pretty"
   ],
   "author": "LMY",
   "license": "MIT",
