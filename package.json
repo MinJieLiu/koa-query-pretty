@@ -1,0 +1,26 @@
+{
+  "name": "koa-queryparser",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint lib/*.js",
+    "test": "npm run lint && mocha --colors"
+  },
+  "keywords": [
+    "koa",
+    "query",
+    "koa-query",
+    "koa-queryparser"
+  ],
+  "author": "LMY",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.0",
+    "koa": "^2.3.0",
+    "mocha": "^3.4.2",
+    "supertest": "^3.0.0"
+  }
+}
