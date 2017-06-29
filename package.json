@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint lib/*.js",
-    "test": "npm run lint && mocha --colors"
+    "test": "npm run lint && nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -20,11 +21,13 @@
   "author": "LMY",
   "license": "MIT",
   "devDependencies": {
+    "coveralls": "^2.13.1",
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.0",
     "koa": "^2.3.0",
     "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
     "supertest": "^3.0.0"
   }
 }
