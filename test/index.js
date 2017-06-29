@@ -17,6 +17,7 @@ describe('koa-query-pretty', () => {
         name,
         hobby,
         money,
+        kill,
         enable,
         active,
         love,
@@ -35,6 +36,7 @@ describe('koa-query-pretty', () => {
       assert(hobby[0] === 1);
       assert(hobby[1] === 2);
       assert(money === 1.555);
+      assert(kill === 0);
       assert(enable === true);
       assert(active === false);
       assert(love === '1,2');
@@ -46,7 +48,7 @@ describe('koa-query-pretty', () => {
     });
 
     request(app.listen())
-      .get('/home?id=1&name=jack&hobby=1&hobby=2&money=1.555' +
+      .get('/home?id=1&name=jack&hobby=1&hobby=2&money=1.555&kill=0' +
         '&enable=true&active=false&love=1,2&check=yes&other=1x6&math=-1&version=1.1.2')
       .expect(200)
       .end(() => done());
