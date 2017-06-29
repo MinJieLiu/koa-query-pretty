@@ -11,7 +11,7 @@ Pretty query middleware for koa.
 
 `koa` 默认使用 `queryString` 解析 `GET` 参数，但解析后的参数都是 `string` 类型。
 
-`koa-query-pretty` 可以将类似于 `int` 、`float`、`boolean` 转换为具体类型
+`koa-query-pretty` 可以将类似于 `int` 、`float`、`boolean` 转换为具体类型。
 
 ### 安装
 
