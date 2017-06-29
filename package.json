@@ -1,6 +1,6 @@
 {
   "name": "koa-query-pretty",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Pretty query middleware for koa.",
   "main": "lib/index.js",
   "scripts": {
