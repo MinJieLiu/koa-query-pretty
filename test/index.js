@@ -42,7 +42,7 @@ describe('koa-query-pretty', () => {
       assert(other === '1x6');
       assert(math === -1);
       assert(version === '1.1.2');
-      await next;
+      await next();
     });
 
     request(app.listen())
@@ -60,7 +60,7 @@ describe('koa-query-pretty', () => {
       assert(ctx.prettyQuery !== undefined);
       assert(ctx.prettyQuery.name === 1);
       assert(ctx.query.name === '1');
-      await next;
+      await next();
     });
 
     request(app.listen())
