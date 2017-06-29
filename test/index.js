@@ -24,8 +24,10 @@ describe('koa-query-pretty', () => {
         other,
         math,
         version,
-      } = ctx.prettyQuery;
+      } = ctx.query;
 
+      assert(ctx.prettyQuery === undefined);
+      assert(ctx.request.query.id === 1);
       assert(id === 1);
       assert(name === 'jack');
       assert(Array.isArray(hobby));
@@ -46,6 +48,23 @@ describe('koa-query-pretty', () => {
     request(app.listen())
       .get('/home?id=1&name=jack&hobby=1&hobby=2&money=1.555' +
         '&enable=true&active=false&love=1,2&check=yes&other=1x6&math=-1&version=1.1.2')
+      .expect(200)
+      .end(() => done());
+  });
+
+  it('should assign params successful', (done) => {
+    const app = new Koa();
+    app.use(queryPretty({ override: false }));
+
+    app.use(async (ctx, next) => {
+      assert(ctx.prettyQuery !== undefined);
+      assert(ctx.prettyQuery.name === 1);
+      assert(ctx.query.name === '1');
+      await next;
+    });
+
+    request(app.listen())
+      .get('/user?name=1')
       .expect(200)
       .end(() => done());
   });
