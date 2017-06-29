@@ -1,27 +1,25 @@
 # koa-query-pretty
 
-Pretty query middleware for koa.
+Pretty query koa 中间件.
 
 [![npm](https://img.shields.io/npm/v/koa-query-pretty.svg?style=flat-square)](https://www.npmjs.com/package/koa-query-pretty)
 [![Build Status](https://travis-ci.org/MinJieLiu/koa-query-pretty.svg?branch=master)](https://travis-ci.org/MinJieLiu/koa-query-pretty)
 [![Coverage Status](https://coveralls.io/repos/github/MinJieLiu/koa-query-pretty/badge.svg?branch=master)](https://coveralls.io/github/MinJieLiu/koa-query-pretty?branch=master)
 [![npm](https://img.shields.io/npm/dt/koa-query-pretty.svg?style=flat-square)](https://github.com/MinJieLiu/koa-query-pretty)
 
-[中文 README](README-zh_CN.md)
+### 说明
 
-### Description
+`koa` 默认使用 `queryString` 解析 `GET` 参数，但解析后的参数都是 `string` 类型。
 
-`Koa` uses` queryString` to parse the `GET` parameter by default, but the parsed arguments are` string`.
+`koa-query-pretty` 可以将类似于 `int` 、`float`、`boolean` 转换为具体类型。
 
-`Koa-query-pretty` can be converted to concrete types like` int`, `float`,` boolean`.
-
-### install
+### 安装
 
 ```
 yarn add koa-query-pretty
 ```
 
-### use
+### 使用
 
 ```js
 const Koa = require('koa');
@@ -31,11 +29,11 @@ const app = new Koa();
 app.use(queryPretty());
 ```
 
-### effect
+### 效果
 
 /home?id=1&name=jack&enable=true&money=2.5&hobby=1&hobby=2
 
-result
+结果
 
 ctx.query:
 ```json
@@ -51,11 +49,11 @@ ctx.query:
 }
 ```
 
-### configuration
+### 配置
 
 #### override
 
-Overwrite the `ctx.query` parameter, default` true`, otherwise use `ctx.prettyQuery` to get
+覆盖 `ctx.query` 参数，默认 `true`，否则使用 `ctx.prettyQuery` 获取
 
 ```js
 app.use(queryPretty({ override: false }));
