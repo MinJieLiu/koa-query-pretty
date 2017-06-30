@@ -13,7 +13,7 @@ Pretty query middleware for koa.
 
 `Koa` uses` queryString` to parse the `GET` parameter by default, but the parsed arguments are` string`.
 
-`Koa-query-pretty` can be converted to concrete types like` int`, `float`,` boolean`.
+`Koa-query-pretty` can be converted to concrete types like `int`, `float`,` boolean`, `null`, `undefined`.
 
 ### install
 

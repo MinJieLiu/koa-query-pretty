@@ -59,14 +59,21 @@ describe('koa-query-pretty', () => {
     app.use(queryPretty({ override: false }));
 
     app.use(async (ctx, next) => {
+      const {
+        name,
+        smile,
+        laugh,
+      } = ctx.prettyQuery;
       assert(ctx.prettyQuery !== undefined);
-      assert(ctx.prettyQuery.name === 1);
+      assert(name === 1);
+      assert(smile === null);
+      assert(laugh === undefined);
       assert(ctx.query.name === '1');
       await next();
     });
 
     request(app.listen())
-      .get('/user?name=1')
+      .get('/user?name=1&smile=null&laugh=undefined')
       .expect(200)
       .end(() => done());
   });

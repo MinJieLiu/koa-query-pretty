@@ -1,6 +1,6 @@
 {
   "name": "koa-query-pretty",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Pretty query middleware for koa.",
   "main": "lib/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^2.13.1",
-    "eslint": "^4.1.1",
+    "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.0",
     "koa": "^2.3.0",
