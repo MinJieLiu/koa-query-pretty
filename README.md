@@ -21,6 +21,8 @@ Pretty query middleware for koa.
 yarn add koa-query-pretty
 ```
 
+Support node.js v7.6+
+
 ### use
 
 ```js

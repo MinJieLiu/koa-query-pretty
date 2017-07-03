@@ -19,6 +19,8 @@ Pretty query koa 中间件.
 yarn add koa-query-pretty
 ```
 
+支持 node.js v7.6+
+
 ### 使用
 
 ```js
